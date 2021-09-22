@@ -4,7 +4,7 @@
 
 | view                | 描述                      |
 | ------------------- | ------------------------- |
-| SlidingBlockTabView | 仿MIUI12相册切换TabLayout |
+| [SlidingBlockTabView](/uikit/src/main/java/com/zhangjian/uikit/tab/SlidingBlockTabView.kt) | 仿MIUI12相册切换TabLayout |
 
 ### SlidingBlockTabView
 
