@@ -1,6 +1,14 @@
-## SlidingBlockTabView
+[demo下载地址](/apk/app-debug.apk)
 
-仿MIUI相机切换TabLayout
+## 功能列表
+
+| view                | 描述                      |
+| ------------------- | ------------------------- |
+| SlidingBlockTabView | 仿MIUI12相册切换TabLayout |
+
+### SlidingBlockTabView
+
+仿MIUI12相册切换TabLayout
 
 #### 与ViewPage或ViewPage2一起使用：
 
