@@ -26,23 +26,24 @@ class SlidingBlockActionActivity : FragmentActivity() {
         val tabView: SlidingBlockTabView = findViewById(R.id.slidingBlock)
         val titles = mutableListOf<String>()
         titles.apply {
-            add("Line1")
-            add("Line2")
-            add("Line3")
-            add("Line4")
-            add("OTHER")
+            add("GROUP1")
+            add("GROUP2")
+            add("GROUP3")
+            add("GROUP4")
+            add("GROUP5")
         }
 
         val linearLayoutManager = LinearLayoutManager(this@SlidingBlockActionActivity)
         recycleView.apply {
             val buttonRouters: MutableList<ButtonRouter> = mutableListOf()
             buttonRouters.apply {
-                add(ButtonRouter("Line1"))
-                add(ButtonRouter("Line2"))
-                add(ButtonRouter("Line3"))
-                add(ButtonRouter("Line4"))
-                for (i in 0..20) {
-                    add(ButtonRouter("Other"))
+                for (title in titles) {
+                    val textBuilder = StringBuilder(title)
+                    for (i in 0 until 80) {
+                        textBuilder.append("\n$title")
+                    }
+                    add(ButtonRouter(textBuilder.toString()))
+
                 }
             }
             layoutManager = linearLayoutManager
@@ -52,7 +53,7 @@ class SlidingBlockActionActivity : FragmentActivity() {
                 override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
                     super.onScrolled(recyclerView, dx, dy)
                     val firstVisibleIndex =
-                        linearLayoutManager.findFirstVisibleItemPosition().coerceAtMost(titles.size - 1)
+                        linearLayoutManager.findFirstVisibleItemPosition()
                     if (firstVisibleIndex != curRecycleViewIndex) {
                         tabView.activeScrollToIndex(firstVisibleIndex)
                         curRecycleViewIndex = firstVisibleIndex
