@@ -11,11 +11,12 @@
             android:layout_height="38dp"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="15dp"
-            android:layout_marginRight="15dp" />
+            android:layout_marginRight="15dp"/>
 
-    <androidx.viewpager.widget.ViewPager
-            android:id="@+id/viewPager"
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvContent"
+            android:layout_marginTop="5dp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"/>
 
 </LinearLayout>

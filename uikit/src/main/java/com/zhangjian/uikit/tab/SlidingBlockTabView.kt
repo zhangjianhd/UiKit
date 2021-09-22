@@ -49,7 +49,7 @@ class SlidingBlockTabView : LinearLayout {
     private var slidingBlockColor = Color.parseColor("#FFFFFF")
     private var slidingBlockColorShadow = Color.parseColor("#CCCCCC")
 
-    private val radius = DisplayUtil.dip2px(context, 6f).toFloat()
+    private val radius = DisplayUtil.dip2px(context, 8f).toFloat()
     private val filter = BlurMaskFilter(radius / 2, BlurMaskFilter.Blur.OUTER)
 
     init {
@@ -101,7 +101,7 @@ class SlidingBlockTabView : LinearLayout {
 
         position = viewPager.currentItem.toFloat()  //初始选中位置为page当前位置
 
-        buildTabTitles(titles) {
+        bindTabTitles(titles) {
             tabChang?.invoke(it)
             viewPager.currentItem = it
         }
@@ -137,7 +137,7 @@ class SlidingBlockTabView : LinearLayout {
 
         position = viewPager.currentItem.toFloat()  //初始选中位置为page当前位置
 
-        buildTabTitles(titles) {
+        bindTabTitles(titles) {
             tabChang?.invoke(it)
             viewPager.currentItem = it
         }
@@ -169,7 +169,7 @@ class SlidingBlockTabView : LinearLayout {
      * 如果不是绑定ViewPager,可直接使用此方法设置标题以及点击时的事件
      */
     @SuppressLint("ClickableViewAccessibility")
-    fun buildTabTitles(titles: MutableList<String>, click: (Int) -> Unit) {
+    fun bindTabTitles(titles: MutableList<String>, click: (Int) -> Unit) {
         for (i in 0 until titles.size) {
             val textView = TextView(context)
             textView.text = titles[i]

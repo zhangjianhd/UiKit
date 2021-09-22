@@ -24,9 +24,11 @@ class MenuListAdapter(private val buttonRouters: MutableList<ButtonRouter>) : Re
     override fun onBindViewHolder(holder: ViewHolderImpl, position: Int) {
         val buttonRouter = buttonRouters[position]
         holder.button.text = buttonRouter.text
-        holder.button.setOnClickListener {
-            val intent = Intent(it.context, buttonRouter.targetActivityClass)
-            it.context.startActivity(intent)
+        buttonRouter.targetActivityClass?.let { activityClass ->
+            holder.button.setOnClickListener {
+                val intent = Intent(it.context, activityClass)
+                it.context.startActivity(intent)
+            }
         }
     }
 
@@ -35,4 +37,4 @@ class MenuListAdapter(private val buttonRouters: MutableList<ButtonRouter>) : Re
 
 class ViewHolderImpl(val button: Button) : RecyclerView.ViewHolder(button)
 
-class ButtonRouter(val text: String, val targetActivityClass: Class<out Activity>)
+class ButtonRouter(val text: String, val targetActivityClass: Class<out Activity>? = null)
