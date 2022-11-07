@@ -19,6 +19,7 @@
         <activity android:name=".slidingblock.SlidingBlockTabActivity"/>
         <activity android:name=".slidingblock.SlidingBlockViewPagerActivity"/>
         <activity android:name=".slidingblock.SlidingBlockActionActivity"/>
+        <activity android:name=".slidingblock.SlidingBlockScopeActivity"/>
     </application>
 
 </manifest>
