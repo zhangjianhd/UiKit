@@ -18,6 +18,7 @@ class MenuListAdapter(private val buttonRouters: MutableList<ButtonRouter>) : Re
         val layoutParams = MarginLayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
         layoutParams.topMargin = DisplayUtil.dip2px(parent.context, 15f)
         button.layoutParams = layoutParams
+        button.isAllCaps = false
         return ViewHolderImpl(button)
     }
 
