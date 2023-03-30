@@ -1,13 +1,9 @@
-package com.zhangjian.samp.slidingblock
+package com.zhangjian.samp.scop
 
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.FragmentActivity
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.zhangjian.samp.ButtonRouter
-import com.zhangjian.samp.MenuListAdapter
 import com.zhangjian.samp.R
 import com.zhangjian.uikit.scope.PriceSlidingBlockScopeAdapter
 import com.zhangjian.uikit.scope.SlidingBlockScopeView
