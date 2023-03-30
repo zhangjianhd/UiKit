@@ -11,4 +11,10 @@
         <attr name="scopeColor" format="color" />
         <attr name="drawableBlock" format="reference" />
     </declare-styleable>
+    <declare-styleable name="PieChart">
+        <attr name="divisionRadius" format="dimension" />
+        <attr name="ringWidth" format="dimension" />
+        <attr name="coverRingWidth" format="dimension" />
+        <attr name="cornerCut" format="boolean" />
+    </declare-styleable>
 </resources>

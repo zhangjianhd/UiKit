@@ -2,6 +2,7 @@ package com.zhangjian.samp.slidingblock
 
 import android.os.Bundle
 import androidx.fragment.app.FragmentActivity
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.zhangjian.samp.ButtonRouter
@@ -23,7 +24,7 @@ class SlidingBlockTabActivity : FragmentActivity() {
         }
         val adapter = MenuListAdapter(buttonRouters)
         val recycleView: RecyclerView = findViewById(R.id.rvList)
-        recycleView.layoutManager = LinearLayoutManager(this)
+        recycleView.layoutManager = GridLayoutManager(this, 2)
         recycleView.adapter = adapter
     }
 }

@@ -2,9 +2,11 @@ package com.zhangjian.samp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.zhangjian.samp.slidingblock.SlidingBlockScopeActivity
+import com.zhangjian.samp.chart.PieChartActivity
+import com.zhangjian.samp.scop.SlidingBlockScopeActivity
 import com.zhangjian.samp.slidingblock.SlidingBlockTabActivity
 
 class MainActivity : AppCompatActivity() {
@@ -14,14 +16,17 @@ class MainActivity : AppCompatActivity() {
 
         val buttonRouters: MutableList<ButtonRouter> = mutableListOf()
         buttonRouters.apply {
-            add(ButtonRouter("SlidingBlockTabView", SlidingBlockTabActivity::class.java))
+            add(ButtonRouter("TAB滑块", SlidingBlockTabActivity::class.java))
         }
         buttonRouters.apply {
-            add(ButtonRouter("SlidingBlockScopeView", SlidingBlockScopeActivity::class.java))
+            add(ButtonRouter("范围滑块", SlidingBlockScopeActivity::class.java))
+        }
+        buttonRouters.apply {
+            add(ButtonRouter("饼图", PieChartActivity::class.java))
         }
         val adapter = MenuListAdapter(buttonRouters)
         val recycleView: RecyclerView = findViewById(R.id.rvList)
-        recycleView.layoutManager = LinearLayoutManager(this)
+        recycleView.layoutManager = GridLayoutManager(this, 3)
         recycleView.adapter = adapter
     }
 }
