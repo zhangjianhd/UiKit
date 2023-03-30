@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.zhangjian.samp.chart.PieChartActivity
+import com.zhangjian.samp.hobby.HobbySlideActivity
 import com.zhangjian.samp.scop.SlidingBlockScopeActivity
 import com.zhangjian.samp.slidingblock.SlidingBlockTabActivity
 
@@ -23,6 +24,9 @@ class MainActivity : AppCompatActivity() {
         }
         buttonRouters.apply {
             add(ButtonRouter("饼图", PieChartActivity::class.java))
+        }
+        buttonRouters.apply {
+            add(ButtonRouter("喜好侧滑", HobbySlideActivity::class.java))
         }
         val adapter = MenuListAdapter(buttonRouters)
         val recycleView: RecyclerView = findViewById(R.id.rvList)

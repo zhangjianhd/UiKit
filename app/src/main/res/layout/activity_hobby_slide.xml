@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f3f6">
+
+    <TextView
+        android:id="@+id/tvIndex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_goneMarginTop="30dp"
+        tools:text="12/20" />
+
+    <com.zhangjian.uikit.page.HobbySlideView
+        android:id="@+id/hobbySlide"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:padding="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/ivDisLike"
+        app:layout_constraintDimensionRatio="375:475"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvIndex"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <ImageView
+        android:id="@+id/ivDisLike"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/sp_r100_stroke_line_solid_white"
+        android:padding="20dp"
+        android:src="@drawable/ico_declare_slide_dislike"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/ivLike"
+        app:layout_constraintTop_toBottomOf="@+id/hobbySlide" />
+
+    <ImageView
+        android:id="@+id/ivLike"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="50dp"
+        android:background="@drawable/sp_r100_stroke_line_solid_white"
+        android:padding="20dp"
+        android:src="@drawable/ico_declare_slide_like"
+        app:layout_constraintLeft_toRightOf="@+id/ivDisLike"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ivDisLike"
+        app:layout_constraintVertical_bias="0" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/gSlide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="hobbySlide,ivDisLike,ivLike" />
+
+    <TextView
+        android:id="@+id/tvReStart"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:background="@drawable/sp_r100_gradient_ff617b_2_ff7070"
+        android:gravity="center"
+        android:paddingHorizontal="20dp"
+        android:text="重新开始"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
