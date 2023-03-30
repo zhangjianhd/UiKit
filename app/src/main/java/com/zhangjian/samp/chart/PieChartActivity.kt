@@ -26,7 +26,7 @@ class PieChartActivity : FragmentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.layout_pie_chart)
+        setContentView(R.layout.activity_pie_chart)
 
         val dataBeans = mutableListOf<DataBean>().apply {
             add(DataBean(70f, Color.parseColor("#FFC86B"), Color.parseColor("#FFBD56")))
