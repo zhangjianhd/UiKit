@@ -8,7 +8,7 @@
 | [SlidingBlockScopeView](/uikit/src/main/java/com/zhangjian/uikit/scope/SlidingBlockScopeView.kt) | 通过滑块获取区间范围，常用于价格范围   |
 | [PieChart](/uikit/src/main/java/com/zhangjian/uikit/chart/PieChart.kt)                           | 饼状图，可带衔接切角，美化样式      |
 
-### SlidingBlockTabView
+## SlidingBlockTabView
 
 仿MIUI12相册切换TabLayout
 
@@ -23,8 +23,7 @@ bindContent(content: View, titles: MutableList<String>)
 content传入ViewPager或ViewPager2，**需要先绑定adapter，会检验ViewPager的page个数和titles的个数**
 ，内部处理了ViewPager的联动，只需要绑定即可
 
--
-范例：[SlidingBlockViewPagerActivity](/app/src/main/java/com/zhangjian/samp/slidingblock/SlidingBlockViewPagerActivity.kt)
+- 范例：[SlidingBlockViewPagerActivity](/app/src/main/java/com/zhangjian/samp/slidingblock/SlidingBlockViewPagerActivity.kt)
 
 ```
   val viewPager: ViewPager = findViewById(R.id.viewPager)
@@ -54,13 +53,12 @@ bindTabTitles(titles: MutableList<String>, click: (Int) -> Unit)
 activeScrollToIndex(index: Int)
 ```
 
--
-范例：[SlidingBlockActionActivity](/app/src/main/java/com/zhangjian/samp/slidingblock/SlidingBlockActionActivity.kt)
+- 范例：[SlidingBlockActionActivity](/app/src/main/java/com/zhangjian/samp/slidingblock/SlidingBlockActionActivity.kt)
 - 效果
 
 ![自由控制的滑块位置](/image/自由控制的滑块位置.gif)
 
-### SlidingBlockScopeView
+## SlidingBlockScopeView
 
 可拖拽滑块选取价格区间，效果：
 
@@ -105,8 +103,7 @@ activeScrollToIndex(index: Int)
   fun setIndex(leftIndex: Int, rightIndex: Int)
   ```
 
--
-范例：[SlidingBlockScopeActivity](/app/src/main/java/com/zhangjian/samp/scop/SlidingBlockScopeActivity.kt)
+- 范例：[SlidingBlockScopeActivity](/app/src/main/java/com/zhangjian/samp/scop/SlidingBlockScopeActivity.kt)
 
 ### PieChart
 
@@ -117,7 +114,7 @@ activeScrollToIndex(index: Int)
 - 支持属性配置：
 
   | 属性值 | 说明 |
-  ----------------| -------------- | ------------------ |
+  |----------------| -------------- |
   | ringWidth | 圆环宽度 |
   | coverRingWidth | 内层蒙层宽度 |
   | cornerCut | 是否衔接处绘制切角 |
