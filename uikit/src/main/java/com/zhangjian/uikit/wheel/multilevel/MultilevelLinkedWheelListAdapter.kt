@@ -65,3 +65,13 @@ open class MultilevelBean : IMultiPickerBean {
         return name ?: ""
     }
 }
+
+fun MultilevelBean.looperSelectHeadNode(): MultilevelBean? {
+    val parent = this.parent
+    return if (parent != null) {
+        parent.selectNext = this
+        parent.looperSelectHeadNode()
+    } else {
+        this
+    }
+}

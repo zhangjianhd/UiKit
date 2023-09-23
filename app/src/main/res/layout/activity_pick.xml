@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.zhangjian.uikit.wheel.DateWheelView
+    <com.zhangjian.uikit.wheel.impl.DateWheelView
         android:id="@+id/datePick"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,10 +18,10 @@
         android:id="@+id/btnMonth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="按月"
         android:layout_marginTop="16dp"
-        app:layout_constraintRight_toLeftOf="@+id/btnDay"
+        android:text="按月"
         app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btnDay"
         app:layout_constraintTop_toBottomOf="@+id/datePick" />
 
     <Button
@@ -29,8 +29,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="按日"
-        app:layout_constraintRight_toLeftOf="@+id/btnTimeGet"
         app:layout_constraintLeft_toRightOf="@+id/btnMonth"
+        app:layout_constraintRight_toLeftOf="@+id/btnTimeGet"
         app:layout_constraintTop_toTopOf="@+id/btnMonth" />
 
     <Button
@@ -41,5 +41,27 @@
         app:layout_constraintLeft_toRightOf="@+id/btnDay"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="@+id/btnMonth" />
+
+
+    <com.zhangjian.uikit.wheel.impl.MultiPickerView
+        android:id="@+id/multiPick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnMonth" />
+
+
+    <Button
+        android:id="@+id/btnGetMulti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="当前选择"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/multiPick" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

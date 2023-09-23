@@ -1,4 +1,4 @@
-package com.zhangjian.uikit.wheel
+package com.zhangjian.uikit.wheel.impl
 
 import android.content.Context
 import android.util.AttributeSet
@@ -8,6 +8,9 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.zhangjian.uikit.R
+import com.zhangjian.uikit.wheel.NormalItemItemCreate
+import com.zhangjian.uikit.wheel.PickerType
+import com.zhangjian.uikit.wheel.WheelView
 import com.zhangjian.uikit.wheel.adapter.BaseWheelListAdapter
 import com.zhangjian.uikit.wheel.date.*
 import java.util.Calendar
@@ -25,7 +28,7 @@ class DateWheelView : ConstraintLayout {
     )
 
     init {
-        LayoutInflater.from(context).inflate(R.layout.layout_data_wheel, this, true)
+        LayoutInflater.from(context).inflate(R.layout.layout_multi_picker, this, true)
 
     }
 
