@@ -5,7 +5,7 @@ import java.util.Locale
 import java.util.Random
 
 /**
- *  Create by shang_dong on 2023/9/23
+ *  Create by zhangjian on 2023/9/23
  */
 fun getRandColor(): String {
     var r: String

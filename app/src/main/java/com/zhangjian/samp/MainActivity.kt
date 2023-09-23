@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.zhangjian.samp.chart.PieChartActivity
 import com.zhangjian.samp.hobby.HobbySlideActivity
 import com.zhangjian.samp.longimage.LongImagePreviewActivity
+import com.zhangjian.samp.pick.PickActivity
 import com.zhangjian.samp.scop.SlidingBlockScopeActivity
 import com.zhangjian.samp.slidingblock.SlidingBlockTabActivity
 
@@ -31,6 +32,9 @@ class MainActivity : AppCompatActivity() {
         }
         buttonRouters.apply {
             add(ButtonRouter("长图预览", LongImagePreviewActivity::class.java))
+        }
+        buttonRouters.apply {
+            add(ButtonRouter("滚轮联级选择", PickActivity::class.java))
         }
         val adapter = MenuListAdapter(buttonRouters)
         val recycleView: RecyclerView = findViewById(R.id.rvList)

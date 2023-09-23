@@ -25,6 +25,7 @@
         <activity android:name=".chart.PieChartActivity" />
         <activity android:name=".hobby.HobbySlideActivity" />
         <activity android:name=".longimage.LongImagePreviewActivity" />
+        <activity android:name=".pick.PickActivity" />
     </application>
 
 </manifest>
