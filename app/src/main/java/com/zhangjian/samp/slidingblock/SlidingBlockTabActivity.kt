@@ -20,7 +20,7 @@ class SlidingBlockTabActivity : FragmentActivity() {
         val buttonRouters: MutableList<ButtonRouter> = mutableListOf()
         buttonRouters.apply {
             add(ButtonRouter("绑定ViewPage", SlidingBlockViewPagerActivity::class.java))
-            add(ButtonRouter("主动处理点击", SlidingBlockActionActivity::class.java))
+            add(ButtonRouter("锚点", SlidingBlockActionActivity::class.java))
         }
         val adapter = MenuListAdapter(buttonRouters)
         val recycleView: RecyclerView = findViewById(R.id.rvList)

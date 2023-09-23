@@ -1,5 +1,6 @@
 package com.zhangjian.samp.slidingblock
 
+import android.graphics.Color
 import android.os.Bundle
 import android.view.Gravity
 import android.view.View
@@ -9,6 +10,7 @@ import androidx.fragment.app.FragmentActivity
 import androidx.viewpager.widget.PagerAdapter
 import androidx.viewpager.widget.ViewPager
 import com.zhangjian.samp.R
+import com.zhangjian.samp.getRandColorInt
 import com.zhangjian.uikit.tab.SlidingBlockTabView
 
 /**
@@ -40,8 +42,12 @@ class SlidingBlockViewPagerActivity : FragmentActivity() {
                 view.text = it
                 view.gravity = Gravity.CENTER
                 val layoutParams =
-                    ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT)
+                    ViewGroup.LayoutParams(
+                        ViewGroup.LayoutParams.MATCH_PARENT,
+                        ViewGroup.LayoutParams.MATCH_PARENT
+                    )
                 view.layoutParams = layoutParams
+                view.setBackgroundColor(getRandColorInt())
                 view
             }
             for (title in titles) {

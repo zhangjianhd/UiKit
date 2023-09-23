@@ -1,12 +1,16 @@
 package com.zhangjian.samp.slidingblock
 
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
+import android.view.Gravity
 import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.zhangjian.samp.ButtonRouter
 import com.zhangjian.samp.MenuListAdapter
 import com.zhangjian.samp.R
+import com.zhangjian.samp.getRandColorInt
 import com.zhangjian.uikit.tab.SlidingBlockTabView
 
 /**
@@ -39,11 +43,14 @@ class SlidingBlockActionActivity : FragmentActivity() {
             buttonRouters.apply {
                 for (title in titles) {
                     val textBuilder = StringBuilder(title)
-                    for (i in 0 until 80) {
-                        textBuilder.append("\n$title")
+                    for (i in 0 until 30) {
+                        textBuilder.append("\n")
                     }
-                    add(ButtonRouter(textBuilder.toString()))
-
+                    add(ButtonRouter(textBuilder.toString()){
+                        it.setBackgroundColor(getRandColorInt())
+                        it.gravity = Gravity.CENTER
+                        it.setTextColor(Color.WHITE)
+                    })
                 }
             }
             layoutManager = linearLayoutManager
@@ -63,7 +70,7 @@ class SlidingBlockActionActivity : FragmentActivity() {
         }
 
         tabView.bindTabTitles(titles) {
-            linearLayoutManager.scrollToPosition(it)
+            linearLayoutManager.scrollToPositionWithOffset(it, 0)
         }
     }
 }
