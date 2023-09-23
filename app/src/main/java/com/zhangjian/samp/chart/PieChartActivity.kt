@@ -8,7 +8,7 @@ import com.zhangjian.uikit.chart.DataBean
 import com.zhangjian.uikit.chart.PieChart
 
 /**
- *  Create by shang_dong on 2023/3/30
+ *  Create by zhangjian on 2023/3/30
  */
 class PieChartActivity : FragmentActivity() {
 
