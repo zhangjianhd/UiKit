@@ -16,7 +16,7 @@ import com.zhangjian.uikit.page.HobbySlideState
 import com.zhangjian.uikit.page.HobbySlideView
 
 /**
- *  Create by shang_dong on 2023/3/30
+ *  Create by zhangjian on 2023/3/30
  */
 class HobbySlideActivity : FragmentActivity() {
 

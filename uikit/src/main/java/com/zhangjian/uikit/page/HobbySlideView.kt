@@ -11,7 +11,7 @@ import com.zhangjian.uikit.DisplayUtil
 import kotlin.math.abs
 
 /**
- *  Create by shang_dong on 2023/3/1
+ *  Create by zhangjian on 2023/3/1
  */
 class HobbySlideView : FrameLayout {
     constructor(context: Context, attrs: AttributeSet?) : super(context, attrs)
